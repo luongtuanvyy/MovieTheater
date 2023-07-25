@@ -10,7 +10,7 @@ import javax.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/admin/index.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/admin/home.jsp");
         requestDispatcher.forward(request,response);
     }
 
