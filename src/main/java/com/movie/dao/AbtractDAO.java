@@ -1,5 +1,6 @@
 package com.movie.dao;
 
+import com.movie.entity.User;
 import com.movie.utils.JDBCUtils;
 
 import javax.persistence.EntityManager;
@@ -21,30 +22,77 @@ public class AbtractDAO<T> {
         return entityManager.find(clazz, id);
     }
 
-    public List<T> findAll(Class<T> clazz, boolean isActive){
+    public List<T> findAll(Class<T> clazz, boolean isActive) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT o FROM ").append(name).append("o");
-        if(isActive) {
+        if (isActive) {
             sql.append(" WHERE isActive = 1");
         }
-        TypedQuery<T> query = entityManager.createQuery(sql.toString(),clazz);
+        TypedQuery<T> query = entityManager.createQuery(sql.toString(), clazz);
         return query.getResultList();
     }
 
-    public List<T> pageAble(Class<T> clazz, boolean isActive, int pageNumber, int pageSize){
+    public List<T> pageAble(Class<T> clazz, boolean isActive, int pageNumber, int pageSize) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT o FROM ").append(name).append("o");
-        if(isActive) {
+        if (isActive) {
             sql.append(" WHERE isActive = 1");
         }
-        TypedQuery<T> query = entityManager.createQuery(sql.toString(),clazz);
-        query.setFirstResult((pageNumber -1) * pageSize);
+        TypedQuery<T> query = entityManager.createQuery(sql.toString(), clazz);
+        query.setFirstResult((pageNumber - 1) * pageSize);
         query.setMaxResults(pageSize);
         return query.getResultList();
     }
 
+    public List<T> findByParams(Class<T> clazz, String sql, Object... params) {
+        TypedQuery<T> query = entityManager.createQuery(sql,clazz);
+        for (int i = 0; i < params.length; i++) {
+            query.setParameter(i,params[i]);
+        }
+        return query.getResultList();
+    }
 
+    public T create(T entity) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(entity);
+            entityManager.getTransaction().commit();
+            System.out.println("Create completed");
+            return entity;
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            System.out.println("Cannot insert entity" + entity.getClass().getSimpleName());
+            throw new RuntimeException(e);
+        }
+    }
+
+    public T update(T entity) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(entity);
+            entityManager.getTransaction().commit();
+            System.out.println("Update completed");
+            return entity;
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            System.out.println("Cannot update entity" + entity.getClass().getSimpleName());
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void delete(T entity) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.remove(entity);
+            entityManager.getTransaction().commit();
+            System.out.println("Delete completed");
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            System.out.println("Cannot delete entity" + entity.getClass().getSimpleName());
+            throw new RuntimeException(e);
+        }
+    }
 
 }

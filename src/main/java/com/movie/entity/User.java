@@ -16,9 +16,14 @@ import java.io.Serializable;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     int id;
+    @Column(name = "email")
     String email;
+    @Column(name = "password")
     String password;
+    @Column(name = "isAdmin")
     boolean isAdmin;
+    @Column(name = "isActive")
     boolean isActive;
 }

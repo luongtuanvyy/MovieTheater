@@ -1,6 +1,16 @@
 package com.movie.dao;
 
-public class UserDAO {
+import com.movie.entity.User;
 
+import java.util.List;
 
+public interface UserDAO {
+
+    List<User> findAll();
+    User findById(int id);
+    List<User> findByEmail(String email);
+    List<User> findByActive(boolean active);
+    User create(User user);
+    User update(User user);
+    void delete(User user);
 }
