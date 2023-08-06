@@ -104,7 +104,7 @@
     <div class="openning ">
         <div class="grid grid-cols-10 py-10">
             <div class="mt-10 title col-start-2 col-span-7">
-                <p class="text-white text-5xl font-bold">Opening this week</p>
+                <p class="text-white text-5xl font-bold">Opening</p>
             </div>
         </div>
         <div class="grid grid-cols-10 gap-4">
@@ -201,6 +201,110 @@
                 </div>
             </div>
         </c:forEach>
+        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+    </div>
+    <div class="openning ">
+        <div class="grid grid-cols-10 py-10">
+            <div class="mt-10 title col-start-2 col-span-7">
+                <p class="text-white text-5xl font-bold">Opening this week</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-10 gap-4">
+            <div class="col-start-2 col-span-2">
+                <p class="text-white">Chọn thể loại</p>
+                <label for="underline_selec" class="sr-only">Underline select</label>
+                <select id="underline_selec"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                </select>
+            </div>
+            <div class="col-span-2">
+                <p class="text-white">Chọn thể loại</p>
+                <label for="underline_select" class="sr-only">Underline select</label>
+                <select id="underline_select"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                </select>
+            </div>
+            <div class="col-span-2">
+                <p class="text-white">Chọn thể loại</p>
+                <label for="underline" class="sr-only">Underline select</label>
+                <select id="underline"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                    <option selected>Choose a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                </select>
+            </div>
+            <div class="col-span-2 flex items-end justify-evenly">
+                <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900
+                    focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
+                    focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
+                    dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
+                    dark:hover:bg-gray-700">Filter</button>
+                <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900
+                    focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
+                    focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
+                    dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
+                    dark:hover:bg-gray-700">Clear</button>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div>
+            <c:forEach items="${movieIsComingSoon}" var="movie">
+                <div class="film col-span-2 group/item">
+                    <div
+                            class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+                        <a href="#" class="group-hover/item:bg-gray-500">
+                            <img width="100%" class="rounded-t-lg "
+                                 src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                                 alt="" />
+                        </a>
+                        <div class="p-5">
+                            <div class="grid grid-cols-4">
+                                <a class="col-span-3">
+                                    <h6 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white">
+                                            ${movie.movie.title}</h6>
+                                    <p class="mb-3 text-sm text-gray-700 dark:text-gray-400">
+                                            ${movie.movie.director}
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="like absolute top-0 right-0 p-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M4.45067 13.9082L11.4033 20.4395C11.6428 20.6644 11.7625 20.7769 11.9037 20.8046C11.9673 20.8171 12.0327 20.8171 12.0963 20.8046C12.2375 20.7769 12.3572 20.6644 12.5967 20.4395L19.5493 13.9082C21.5055 12.0706 21.743 9.0466 20.0978 6.92607L19.7885 6.52734C17.8203 3.99058 13.8696 4.41601 12.4867 7.31365C12.2913 7.72296 11.7087 7.72296 11.5133 7.31365C10.1304 4.41601 6.17972 3.99058 4.21154 6.52735L3.90219 6.92607C2.25695 9.0466 2.4945 12.0706 4.45067 13.9082Z"
+                                        fill="#D71313" stroke="#D71313" stroke-width="1.4" />
+                            </svg>
+                        </div>
+                        <div class="age absolute top-0 left-0 p-2 font-bold">
+                            <span>13+</span>
+                        </div>
+                        <div class="">
+                            <button type="button"
+                                    class="text-white bg-[#111827] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover/item:visible z-20">Mua
+                                vé</button>
+                        </div>
+                        <div class="filter absolute top-0 w-full h-full group-hover/item:bg-gray-900/50 z-10">
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
     </div>
 </main>
 <footer class="p-4 py-10 bg-[#111827] sm:p-6 sm:py-10 dark:bg-gray-800">

@@ -17,13 +17,22 @@ public class ScreeningServiceImpl implements ScreeningService {
         screeningDao = new ScreeningDaoImpl();
     }
     @Override
-    public List<Screening> findScreeningOpen() {
+    public List<Screening> findScreeningIsComingSoon() {
         Calendar calendarNow = Calendar.getInstance();
         Calendar calendarNextWeek = Calendar.getInstance();
         calendarNextWeek.add(Calendar.DATE, 7);
         List<Screening> listScreening = screeningDao.findAll().stream()
-                .filter(element -> element.getScreeningStart().before(calendarNow.getTime()))
-                .filter(element -> element.getScreeningStart().after(calendarNextWeek.getTime()))
+                .filter(element -> element.getScreeningStart().after(calendarNow.getTime()))
+                .filter(element -> element.getScreeningStart().before(calendarNextWeek.getTime()))
+                .collect(Collectors.toList());
+        return listScreening;
+    }
+
+    @Override
+    public List<Screening> findScreeningOpen() {
+        Calendar calendarNow = Calendar.getInstance();
+        List<Screening> listScreening = screeningDao.findAll().stream()
+                .filter(element -> element.getScreeningStart().equals(calendarNow.getTime()))
                 .collect(Collectors.toList());
         return listScreening;
     }
