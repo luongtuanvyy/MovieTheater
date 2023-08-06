@@ -1,9 +1,15 @@
 package com.movie.controller;
 
+import com.movie.entity.Movie;
+import com.movie.entity.Screening;
+import com.movie.entity.User;
+import com.movie.service.ScreeningService;
 import com.movie.service.UserService;
+import com.movie.service.implement.ScreeningServiceImpl;
 import com.movie.service.implement.UserServiceImplement;
 
 import java.io.*;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -13,22 +19,17 @@ import javax.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
 
 
-    private UserService userService;
+    private ScreeningService screeningService;
 
     @Override
     public void init() throws ServletException {
-        userService = new UserServiceImplement();
+        screeningService = new ScreeningServiceImpl();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/admin/home.jsp");
-
-        userService.getUsers().forEach(user -> {
-            System.out.println(user.getEmail());
-            System.out.println(user.getPassword());
-        });
-        System.out.println(userService==null?"null":"khong null");
-
+        List<Screening> listScreening = screeningService.findAll();
+        request.setAttribute("movies", listScreening);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/user/demo.jsp");
         requestDispatcher.forward(request, response);
     }
 

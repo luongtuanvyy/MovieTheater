@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 
 @Entity
@@ -18,12 +19,16 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
+
     @Column(name = "email")
     String email;
+
     @Column(name = "password")
     String password;
+
     @Column(name = "isAdmin")
     boolean isAdmin;
-    @Column(name = "isActive")
-    boolean isActive;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Reservation> reservations;
 }
