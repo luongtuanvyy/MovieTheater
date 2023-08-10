@@ -1,15 +1,15 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbtractDAO;
+import com.movie.dao.AbstractDao;
 import com.movie.dao.UserDAO;
 import com.movie.entity.User;
 
 import java.util.List;
 
-public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
+public class UserDAOImplement extends AbstractDao<User> implements UserDAO {
     @Override
     public List<User> findAll() {
-        return super.findAll(User.class,false);
+        return super.findAll(User.class);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
 
     @Override
     public List<User> findByActive(boolean active) {
-        return super.findAll(User.class,true);
+        return super.findAll(User.class);
     }
 
     @Override
