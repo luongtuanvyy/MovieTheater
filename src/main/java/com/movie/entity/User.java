@@ -8,22 +8,41 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Entity
-@Table(name = "user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "users")
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     int id;
+
+    @Column(name = "firstname")
+    String firstName;
+
+    @Column(name = "lastname")
+    String lastName;
+
+    @Column(name = "userName")
+    String userName;
+
     @Column(name = "email")
     String email;
+
+    @Column(name = "phone")
+    String phone;
+
     @Column(name = "password")
     String password;
+
     @Column(name = "isAdmin")
     boolean isAdmin;
+
     @Column(name = "isActive")
     boolean isActive;
+
+    @Column(name = "isMember")
+    boolean isMember;
 }
