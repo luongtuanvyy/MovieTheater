@@ -31,7 +31,6 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        super.init();
         sessionFactory = (SessionFactory) getServletContext().getAttribute("sessionFactory");
     }
 

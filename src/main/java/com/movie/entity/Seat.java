@@ -16,7 +16,13 @@ public class Seat implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-//    private String auditorium_id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_auditorium")
+    private Auditorium auditorium;
+
     private String rowSeat;
+
     private String col;
+
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,6 +17,18 @@ public class Services {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
+    @ManyToOne
+    @JoinColumn(name = "id_water")
+    private Corn corn;
+
     private int quantity_corn;
+
+    @ManyToOne
+    @JoinColumn(name = "id_water")
+    private Water water;
+
     private int quantity_water;
+
+    @OneToMany(mappedBy = "bookTickets")
+    private List<BookTicket> bookTickets;
 }

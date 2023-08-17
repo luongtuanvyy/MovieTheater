@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Data
@@ -45,4 +46,7 @@ public class User implements Serializable {
 
     @Column(name = "isMember")
     boolean isMember;
+
+    @OneToMany(mappedBy = "bookTickets")
+    private List<BookTicket> bookTickets;
 }

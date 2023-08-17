@@ -5,28 +5,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="book_tickets")
+@Table(name = "book_tickets")
 public class BookTicket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private String id;
-//    @Column(name = "size")
-//    private String user_id;
-//    @Column(name = "size")
-//    private String premiere_id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_users")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "id_premiere")
+    private Premiere premiere;
+
     @Column(name = "payment")
     private String payment;
+
     @Column(name = "price")
     private String price;
-//    @Column(name = "seat_id")
-//    private Double seat_id;
-//    @Column(name = "service_id")
-//    private boolean service_id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_seat")
+    private Seat seat;
+
+    @ManyToOne
+    @JoinColumn(name = "id_service")
+    private Services services;
 }

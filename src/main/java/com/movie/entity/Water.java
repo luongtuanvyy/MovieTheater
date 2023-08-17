@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Data
@@ -16,7 +17,13 @@ public class Water {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
     private String type;
+
     private String size;
+
     private String price;
+
+    @OneToMany(mappedBy = "corn")
+    private List<Services> services;
 }

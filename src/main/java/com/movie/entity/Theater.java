@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Data
@@ -21,4 +22,6 @@ public class Theater implements Serializable {
     private String phone;
     private String address;
     private String image;
+    @OneToMany(mappedBy = "auditorium")
+    private List<Auditorium> auditoriums;
 }

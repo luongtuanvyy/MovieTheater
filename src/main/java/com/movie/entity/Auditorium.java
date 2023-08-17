@@ -6,22 +6,35 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="auditorium")
+@Table(name = "auditorium")
 public class Auditorium implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private String id;
+
     @Column(name = "size")
     private String size;
+
     @Column(name = "col")
     private String col;
+
     @Column(name = "rowseat")
     private String rowSeat;
-//    private int theater_id;
+
+    @ManyToOne
+    @JoinColumn(name = "theater_id")
+    private Theater theater;
+
+    @OneToMany(mappedBy = "premiere")
+    private List<Premiere> premieres;
+
+    @OneToMany(mappedBy = "seat")
+    private List<Seat> seat;
 }
