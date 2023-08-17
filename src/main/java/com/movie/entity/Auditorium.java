@@ -32,9 +32,9 @@ public class Auditorium implements Serializable {
     @JoinColumn(name = "theater_id")
     private Theater theater;
 
-    @OneToMany(mappedBy = "premiere")
+    @OneToMany(mappedBy = "auditorium")
     private List<Premiere> premieres;
 
-    @OneToMany(mappedBy = "seat")
+    @OneToMany(mappedBy = "auditorium")
     private List<Seat> seat;
 }

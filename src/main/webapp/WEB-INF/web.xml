@@ -8,6 +8,6 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>/views/admin/index.jsp</welcome-file>
+        <welcome-file>/views/user/home.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

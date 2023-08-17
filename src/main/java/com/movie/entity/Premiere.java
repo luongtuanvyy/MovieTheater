@@ -28,13 +28,16 @@ public class Premiere implements Serializable {
     @JoinColumn(name="id_auditorium")
     private Auditorium auditorium;
 
+    @Column(name = "time")
     private Date time;
 
+    @Column(name = "price")
     private Double price;
 
+    @Column(name = "active")
     private boolean active;
 
-    @OneToMany(mappedBy = "bookTickets")
+    @OneToMany(mappedBy = "premiere")
     private List<BookTicket> bookTickets;
 
 }

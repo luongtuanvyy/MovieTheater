@@ -18,19 +18,24 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "age")
     private String age;
 
     @Column(name = "release_date")
     private Date releaseDate;
 
+    @Column(name = "time")
     private int time;
 
+    @Column(name = "description")
     private String description;
 
+    @Column(name = "type")
     private MovieType type;
 
-    @OneToMany(mappedBy = "premiere")
+    @OneToMany(mappedBy = "movie")
     private List<Premiere> premieres;
 }

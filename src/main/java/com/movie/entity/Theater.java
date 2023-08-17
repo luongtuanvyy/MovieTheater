@@ -18,10 +18,19 @@ public class Theater implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "phone")
     private String phone;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "image")
     private String image;
-    @OneToMany(mappedBy = "auditorium")
+
+    @OneToMany(mappedBy = "theater")
     private List<Auditorium> auditoriums;
 }

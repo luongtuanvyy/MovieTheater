@@ -47,6 +47,6 @@ public class User implements Serializable {
     @Column(name = "isMember")
     boolean isMember;
 
-    @OneToMany(mappedBy = "bookTickets")
+    @OneToMany(mappedBy = "user")
     private List<BookTicket> bookTickets;
 }

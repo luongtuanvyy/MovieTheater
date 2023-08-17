@@ -21,14 +21,16 @@ public class Services {
     @JoinColumn(name = "id_water")
     private Corn corn;
 
-    private int quantity_corn;
+    @Column(name = "quantity_corn")
+    private int quantityCorn;
 
     @ManyToOne
     @JoinColumn(name = "id_water")
     private Water water;
 
-    private int quantity_water;
+    @Column(name = "quantity_water")
+    private int quantityWater;
 
-    @OneToMany(mappedBy = "bookTickets")
+    @OneToMany(mappedBy = "services")
     private List<BookTicket> bookTickets;
 }

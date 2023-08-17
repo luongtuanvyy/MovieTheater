@@ -21,8 +21,10 @@ public class Seat implements Serializable {
     @JoinColumn(name = "id_auditorium")
     private Auditorium auditorium;
 
+    @Column(name = "rowseat")
     private String rowSeat;
 
+    @Column(name = "col")
     private String col;
 
 }
