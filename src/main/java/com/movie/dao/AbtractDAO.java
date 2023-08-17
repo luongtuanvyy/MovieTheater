@@ -27,7 +27,7 @@ public class AbtractDAO<T> {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT o FROM ").append(name).append(" o ");
         if (isActive) {
-            sql.append(" WHERE isActive = 1");
+            sql.append(" WHERE active = 1");
         }
         TypedQuery<T> query = entityManager.createQuery(sql.toString(), clazz);
         return query.getResultList();

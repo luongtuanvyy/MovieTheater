@@ -34,7 +34,7 @@ public class Movie {
     private String description;
 
     @Column(name = "type")
-    private MovieType type;
+    private String type;
 
     @OneToMany(mappedBy = "movie")
     private List<Premiere> premieres;
