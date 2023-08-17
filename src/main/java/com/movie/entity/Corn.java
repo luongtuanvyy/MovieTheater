@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,4 +19,7 @@ public class Corn {
     private String type;
     private String size;
     private String price;
+
+    @OneToMany(mappedBy = "corn")
+    private List<Services> services;
 }

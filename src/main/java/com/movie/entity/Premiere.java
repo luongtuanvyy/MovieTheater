@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -18,9 +19,22 @@ public class Premiere implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-//    private String movie_id;
-//    private String auditorium_id;
+
+    @ManyToOne
+    @JoinColumn(name="id_movies")
+    private Movie movie;
+
+    @ManyToOne
+    @JoinColumn(name="id_auditorium")
+    private Auditorium auditorium;
+
     private Date time;
+
     private Double price;
+
     private boolean active;
+
+    @OneToMany(mappedBy = "bookTickets")
+    private List<BookTicket> bookTickets;
+
 }
