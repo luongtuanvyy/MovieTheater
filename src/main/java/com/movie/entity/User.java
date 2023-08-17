@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 
 @Data
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -46,7 +47,4 @@ public class User implements Serializable {
 
     @Column(name = "isMember")
     boolean isMember;
-
-    @OneToMany(mappedBy = "bookTickets")
-    private List<BookTicket> bookTickets;
 }
