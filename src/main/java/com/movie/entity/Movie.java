@@ -1,39 +1,35 @@
 package com.movie.entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
-@Entity
-@Table(name = "movie")@Data
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-public class Movie implements Serializable {
+@AllArgsConstructor
+@Entity
+@Table(name ="movies")
+public class Movie {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private String id;
 
-    @Column(name = "title")
-    private String title;
+    private String name;
 
-    @Column(name = "director")
-    private String director;
+    private String age;
 
-    @Column(name = "cast")
-    private String cast;
+    @Column(name = "release_date")
+    private Date releaseDate;
 
-    @Column(name = "description")
+    private int time;
+
     private String description;
 
-    @Column(name = "duration_min")
-    private int durationMin;
+    private MovieType type;
 
-    @Column(name = "type")
-    private String type;
-
-    @Column(name = "image")
-    private String image;
-
+    @OneToMany(mappedBy = "premiere")
+    private List<Premiere> premieres;
 }

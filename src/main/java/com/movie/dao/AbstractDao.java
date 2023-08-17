@@ -43,9 +43,9 @@ public class AbstractDao<T> {
     }
 
     public List<T> findByParams(Class<T> clazz, String sql, Object... params) {
-        TypedQuery<T> query = entityManager.createQuery(sql,clazz);
+        TypedQuery<T> query = entityManager.createQuery(sql, clazz);
         for (int i = 0; i < params.length; i++) {
-            query.setParameter(i,params[i]);
+            query.setParameter(i, params[i]);
         }
         return query.getResultList();
     }
@@ -89,9 +89,6 @@ public class AbstractDao<T> {
             System.out.println("Cannot delete entity" + entity.getClass().getSimpleName());
             throw new RuntimeException(e);
         }
-    }
-
-    protected void detele(T entity) {
     }
 
     protected T findOne(Class<T> movieClass, String title, String s) {

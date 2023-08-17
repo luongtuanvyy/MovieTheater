@@ -5,7 +5,7 @@ import com.movie.entity.Movie;
 
 import java.util.List;
 
-public class MovieDAOImplement  extends AbstractDao <Movie> implements MovieDAO {
+public class MovieDAOImplement extends AbstractDao <Movie> implements MovieDAO {
 
     @Override
     public Movie findByTitle(String title) {
@@ -33,6 +33,6 @@ public class MovieDAOImplement  extends AbstractDao <Movie> implements MovieDAO 
     }
     @Override
     public void delete(Movie entity) {
-        super.detele(entity);
+        super.delete(entity);
     }
 }
