@@ -3,7 +3,7 @@ import com.movie.entity.Movie;
 import java.util.List;
 
 public interface MovieDAO {
-    Movie findByTitle(String title);
+    Movie findByName(String name);
     List<Movie> findMovieType(String type);
     List <Movie> findAll();
     Movie create (Movie entity);

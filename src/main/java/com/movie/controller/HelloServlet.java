@@ -24,20 +24,9 @@ import javax.servlet.annotation.*;
 @WebServlet(urlPatterns = {"/hi"})
 public class HelloServlet extends HttpServlet {
 
-
-    private UserService userService = new UserServiceImplement();
-
-    private SessionFactory sessionFactory;
-
     @Override
-    public void init() throws ServletException {
-        sessionFactory = (SessionFactory) getServletContext().getAttribute("sessionFactory");
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        userService.getUsers().forEach(user -> {
-            System.out.println(user.getEmail());
-        });
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rq = req.getRequestDispatcher("/views/user/page/home.jsp");
+        rq.forward(req,resp);
     }
 }

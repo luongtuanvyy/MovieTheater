@@ -28,7 +28,7 @@ public class Movie {
 
     private String description;
 
-    private MovieType type;
+    private String type;
 
     @OneToMany(mappedBy = "premiere")
     private List<Premiere> premieres;

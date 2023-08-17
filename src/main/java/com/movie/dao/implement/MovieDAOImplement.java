@@ -8,13 +8,13 @@ import java.util.List;
 public class MovieDAOImplement extends AbstractDao <Movie> implements MovieDAO {
 
     @Override
-    public Movie findByTitle(String title) {
-        String sql = "FROM Movie WHERE title = ?0";
-        return super.findOne(Movie.class,sql, title);
+    public Movie findByName(String name) {
+        String sql = " FROM Movie WHERE name = ?0";
+        return super.findOne(Movie.class,sql, name);
     }
     @Override
     public List<Movie> findMovieType(String type) {
-        String sql = "FROM Movie WHERE type = ?0";
+        String sql = " FROM Movie WHERE type = ?0";
         return super.findMany(Movie.class,sql, type);
     }
     @Override

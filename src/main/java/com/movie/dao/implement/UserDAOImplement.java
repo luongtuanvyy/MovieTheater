@@ -19,7 +19,7 @@ public class UserDAOImplement extends AbstractDao<User> implements UserDAO {
 
     @Override
     public List<User> findByEmail(String email) {
-        String sql = "SELECT u FROM User o WHERE email = ?0";
+        String sql = "SELECT o FROM User o WHERE email = ?0";
         return super.findByParams(User.class,sql,email);
     }
 

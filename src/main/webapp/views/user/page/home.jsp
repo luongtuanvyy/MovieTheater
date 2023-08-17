@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: luong
+  Date: 8/17/2023
+  Time: 3:15 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
@@ -80,7 +88,7 @@
                                class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-50 rounded-full bg-gray-50 focus:ring-gray-700 focus:border-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                placeholder="Tìm kiếm" required>
                     </div>
-                </form>
+
 
                 <button type="button"
                         class=" text-gray-900 focus:outline-none rounded-lg  focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -90,6 +98,7 @@
                     </svg>
 
                 </button>
+                </form>
                 <a href="" class="rounded-full overflow-hidden w-10 h-10">
                     <img height="100%" src="https://i.pinimg.com/236x/82/0c/40/820c40e25c317070b88488b36dd54885.jpg"
                          alt="">
@@ -147,11 +156,10 @@
             </button>
             <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 2"
                     data-carousel-slide-to="1">
-
                 <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 3"
                         data-carousel-slide-to="2">
-
                 </button>
+            </button>
         </div>
         <!-- Slider controls -->
         <button type="button"

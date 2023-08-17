@@ -13,8 +13,8 @@ public class MovieServiceImplement implements MovieService {
         movieDAO = new MovieDAOImplement();
     }
     @Override
-    public Movie findByTitle(String title) {
-        return movieDAO.findByTitle(title);
+    public Movie findByName(String name) {
+        return movieDAO.findByName(name);
     }
 
     @Override

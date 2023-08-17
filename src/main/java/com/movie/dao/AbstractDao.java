@@ -24,7 +24,7 @@ public class AbstractDao<T> {
     public List<T> findAll(Class<T> clazz) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT o FROM ").append(name).append("o");
+        sql.append("SELECT o FROM ").append(name).append(" o ");
         TypedQuery<T> query = entityManager.createQuery(sql.toString(), clazz);
         return query.getResultList();
     }
@@ -32,7 +32,7 @@ public class AbstractDao<T> {
     public List<T> pageAble(Class<T> clazz, boolean isActive, int pageNumber, int pageSize) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT o FROM ").append(name).append("o");
+        sql.append("SELECT o FROM ").append(name).append(" o ");
         if (isActive) {
             sql.append(" WHERE isActive = 1");
         }
