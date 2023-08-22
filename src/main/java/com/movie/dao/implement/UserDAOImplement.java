@@ -29,6 +29,18 @@ public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
     }
 
     @Override
+    public User findByUsernameAndPassword(String username, String password) {
+        String sql = "SELECT o FROM User o WHERE o.username = ?0 AND o.password = ?1";
+        return super.findOne(User.class,sql,username,password);
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        String sql = "SELECT o FROM User o WHERE o.username = ?0";
+        return super.findOne(User.class,sql,username);
+    }
+
+    @Override
     public User create(User user) {
         return super.create(user);
     }

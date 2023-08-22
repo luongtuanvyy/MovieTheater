@@ -25,7 +25,7 @@ public class AbtractDAO<T> {
     public List<T> findAll(Class<T> clazz, boolean isActive) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT o FROM ").append(name).append("o");
+        sql.append("SELECT o FROM ").append(name).append(" o ");
         if (isActive) {
             sql.append(" WHERE isActive = 1");
         }
@@ -36,7 +36,7 @@ public class AbtractDAO<T> {
     public List<T> pageAble(Class<T> clazz, boolean isActive, int pageNumber, int pageSize) {
         String name = clazz.getSimpleName();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT o FROM ").append(name).append("o");
+        sql.append("SELECT o FROM ").append(name).append(" o ");
         if (isActive) {
             sql.append(" WHERE isActive = 1");
         }
@@ -44,6 +44,18 @@ public class AbtractDAO<T> {
         query.setFirstResult((pageNumber - 1) * pageSize);
         query.setMaxResults(pageSize);
         return query.getResultList();
+    }
+
+    public T findOne(Class<T> clazz,String sql, Object... params){
+        TypedQuery<T> query = entityManager.createQuery(sql, clazz);
+        for (int i = 0; i <params.length;i++){
+            query.setParameter(i,params[i]);
+        }
+        List<T> result = query.getResultList();
+        if(result.isEmpty()){
+            return null;
+        }
+        return result.get(0);
     }
 
     public List<T> findByParams(Class<T> clazz, String sql, Object... params) {
