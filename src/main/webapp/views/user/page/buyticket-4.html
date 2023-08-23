@@ -163,7 +163,7 @@
 
     </header>
 
-    <main class="bg-[#222235]">
+    <main class="bg-[#222235] pb-[60px]">
         <section class="px-2 xl:w-[1300px] xl:m-auto xl:py-[20px]">
             <ul class="list_location flex justify-center items-center gap-[50px]">
                 <li
@@ -176,7 +176,8 @@
                     <span class="text-white">02</span>
                     <span class="text-[#b5b5b5] group-hover:text-white">chọn vé và sản phẩm</span>
                 </li>
-                <li class="location uppercase font-medium py-[10px] transition-all duration-200 text-[16px] border-b-[3px] border-[transparent] hover:border-[#436EFE] cursor-pointer group">
+                <li
+                    class="location uppercase font-medium py-[10px] transition-all duration-200 text-[16px] border-b-[3px] border-[transparent] hover:border-[#436EFE] cursor-pointer group">
                     <span class="text-white">03</span>
                     <span class="text-[#b5b5b5] group-hover:text-white">chọn ghế</span>
                 </li>
@@ -193,7 +194,7 @@
             </ul>
         </section>
         <section class="px-2 xl:w-[1300px] xl:m-auto xl:pt-[40px]">
-            <div class="xl:grid grid-cols-5 gap-[40px]">
+            <div class="xl:grid grid-cols-6 gap-[40px]">
                 <div
                     class="bg-[#fff] p-[10px] my-[20px] rounded-[10px] grid grid-cols-5 gap-5 order-2 col-span-2 xl:my-0 xl:h-fit xl:sticky xl:top-0 shadow-[0px_20px_10px_10px_#00000024]">
                     <div class="col-span-1">
@@ -242,173 +243,69 @@
                 </div>
 
                 <div
-                    class="bg-[#fff] p-[15px] pb-[20px] col-span-3 rounded-[20px] shadow-[0px_20px_10px_10px_#00000024]">
-                    <h4 class="font-bold text-black uppercase text-[18px] py-[10px]">chọn vé / thức ăn</h4>
-                    <div>
-                        <table class="w-full">
-                            <tr class="text-black bg-[#D8C4B6]">
-                                <th class="text-left py-[10px]">Loại vé</th>
-                                <th class="text-center py-[10px]">Số lượng</th>
-                                <th class="text-right py-[10px]">Giá (VNĐ)</th>
-                            </tr>
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">Người Lớn</span>
-                                        <h4>Vé 2D</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button-ticket button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number" class="quality-ticket px-[10px] w-[50px] text-center"
-                                        disabled></input>
-                                    <button
-                                        class="button-ticket button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price-seat text-right" data-price="95000">95.000</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">GHE DOI</span>
-                                        <h4>Vé ghế đôi</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button-ticket button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number" class="quality-ticket px-[10px] w-[50px] text-center"
-                                        disabled></input>
-                                    <button
-                                        class="button-ticket button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price-seat text-right" data-price="95000">95.000</span>
-                                </td>
-                            </tr>
-                        </table>
-                        <div
-                            class="flex justify-between items-center text-[18px] text-black py-[5px] bg-[#dddddd] px-[7px]">
-                            <span class="font-bold text-[#F45050]">Tổng:</span>
-                            <div class="text-[#F45050] font-medium">
-                                <span class="total_price-ticket" data-totalPriceTicket="0">0</span>
-                                <span>VNĐ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="">
-                        <table class="w-full">
-                            <tr class="text-black bg-[#D8C4B6]">
-                                <th class="text-left py-[10px]">Đồ ăn thức uống</th>
-                                <th class="text-center py-[10px]">Số lượng</th>
-                                <th class="text-right py-[10px]">Giá (VNĐ)</th>
-                            </tr>
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">Nước</span>
-                                        <h4>Pessi</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button_food-drink button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number"
-                                        class="quality_food-drink px-[10px] w-[50px] text-center" disabled></input>
-                                    <button
-                                        class="button_food-drink button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price_food-drink text-right" data-foodDrink="20000">20.000</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">Nước</span>
-                                        <h4>Coca</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button_food-drink button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number"
-                                        class="quality_food-drink px-[10px] w-[50px] text-center" disabled></input>
-                                    <button
-                                        class="button_food-drink button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price_food-drink text-right" data-foodDrink="20000">20.000</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">Nước</span>
-                                        <h4>Suối</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button_food-drink button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number"
-                                        class="quality_food-drink px-[10px] w-[50px] text-center" disabled></input>
-                                    <button
-                                        class="button_food-drink button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price_food-drink text-right" data-foodDrink="15000">15.000</span>
-                                </td>
-                            </tr>
+                    class="bg-[#fff] p-[15px] pb-[20px] col-span-4 rounded-[20px] shadow-[0px_20px_10px_10px_#00000024]">
 
-                            <tr class="bg-[#ccc] py-[10px]">
-                                <td>
-                                    <div class="">
-                                        <span class="font-bold">Bắp</span>
-                                        <h4>Bắp vị socola</h4>
-                                    </div>
-                                </td>
-                                <td class="flex justify-center items-center gap-3 mt-[10px]">
-                                    <button
-                                        class="button_food-drink button-down h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="down">-</button>
-                                    <input value="0" type="number"
-                                        class="quality_food-drink px-[10px] w-[50px] text-center" disabled></input>
-                                    <button
-                                        class="button_food-drink button-up h-[20px] w-[20px] bg-[#fff] cursor-pointer text-center leading-[20px] rounded-[50%]"
-                                        data-button="up">+</button>
-                                </td>
-                                <td class="text-right">
-                                    <span class="price_food-drink text-right" data-foodDrink="75000">75.000</span>
-                                </td>
-                            </tr>
-                        </table>
-                        <div
-                            class="flex justify-between items-center text-[18px] text-black py-[5px] bg-[#dddddd] px-[7px]">
-                            <span class="text-[#F45050] font-bold">Tổng:</span>
-                            <div class="text-[#F45050] font-medium">
-                                <span class="total_price-food-drink" data-totalPriceFoodDrink="0">0</span>
-                                <span>VNĐ</span>
+                    <div class="flex py-[10px] justify-between items-center mb-[30px]">
+                        <h4 class="font-bold text-black uppercase text-[18px]">Vui lòng thanh toán</h4>
+                        <span class="time__payment text-[#F45050] font-medium text-[20px]" data-time="10">10:00</span>
+                    </div>
+
+                    <div class="py-[20px] px-[15px] bg-[#F5EFE7] grid grid-cols-5">
+                        <form action="" method="" class=" col-span-4">
+                            <div class="flex items-center gap-[30px]">
+                                <label for="payment_method" class="font-medium w-full">Phương thức thanh toán</label>
+                                <select name="payment_method" id="payment_method"
+                                    class="border border-[#ccc] w-full p-[10px]">
+                                    <option value="none">Chọn phương thức thanh toán</option>
+                                    <option value="zalopay">
+                                        ZaloPay
+                                    </option>
+                                    <option value="momo">
+                                        Ví điện tử MoMo
+                                    </option>
+
+                                    <option value="vnpay">
+                                        VNPAY
+                                    </option>
+                                </select>
                             </div>
-                        </div>
+                            <div class="flex items-center gap-[30px] my-[20px]">
+                                <label for="payment_method" class="font-medium w-full">Họ và tên</label>
+                                <div class="w-full p-[10px] border border-[#ccc] bg-[#fff]">Nguyễn Minh Trí</div>
+                            </div>
+                            <div class="flex items-center gap-[30px] my-[20px]">
+                                <label for="payment_method" class="font-medium w-full">Email</label>
+                                <div class="w-full p-[10px] border border-[#ccc] bg-[#fff]">nguyenminhtri1808t@gmail.com
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-[30px] my-[20px]">
+                                <label for="payment_method" class="font-medium w-full">Số điện thoại</label>
+                                <div class="w-full p-[10px] border border-[#ccc] bg-[#fff]">0398785643</div>
+                            </div>
+
+                            <div class="flex items-center gap-[30px] my-[20px]">
+                                <label for="payment_method" class="font-medium w-full">Mã giảm giá</label>
+                                <input name="voucher" id="voucher"
+                                    class="w-full p-[10px] border border-[#ccc] bg-[#fff]">
+                            </div>
+                            <div class="flex items-center gap-[30px] my-[20px]">
+                                <label for="payment_method" class="font-medium w-full"></label>
+                                <div class="w-full flex flex-col gap-3">
+                                    <button class="p-[15px] bg-[#436efe] font-medium uppercase w-full text-white">Áp
+                                        dụng</button>
+                                    <div class="message text-[11px]">
+                                        (*) Bằng việc click/chạm vào THANH TOÁN, bạn đã xác nhận hiểu rõ các <b>Quy Định
+                                            Giao Dịch Trực Tuyến</b> của Galaxy Cinema
+                                    </div>
+                                    <div class="flex justify-between items-center gap-6">
+                                        <button id="button-back" class="p-[15px] bg-[#436efe] font-medium uppercase w-full text-white">Quay lại</button>
+                                        <button id="button-payment" class="p-[15px] bg-[#436efe] font-medium uppercase w-full text-white">Thanh toán</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <div class="py-[30px] text-white flex justify-center">
-                <button class="p-[15px] bg-[#436efe] font-medium rounded-[10px] uppercase">tiếp tục</button>
             </div>
         </section>
     </main>
@@ -505,159 +402,23 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
     <script>
-        const totalPriceTicket = document.querySelector(".total_price-ticket");
-        const upQualityTicket = document.querySelectorAll(".button-ticket.button-up");
-        const totalPrice = document.querySelector(".total_price");
-        const downQualityTicket = document.querySelectorAll(
-            ".button-ticket.button-down"
-        );
-        const upQualityFoodDrink = document.querySelectorAll(
-            ".button_food-drink.button-up"
-        );
-        const downQualityFoodDrink = document.querySelectorAll(
-            ".button_food-drink.button-down"
-        );
-        const totalPriceFoodDrink = document.querySelector(".total_price-food-drink");
-
-        const VND = new Intl.NumberFormat("vi-VN", {
-            style: "currency",
-            currency: "VND",
-        });
-
-        function handleTicket(button) {
-            const input = button.parentElement.querySelector("input.quality-ticket");
-            const getPriceTicket = button.parentElement.parentElement
-                .querySelector(".price-seat")
-                .getAttribute("data-price");
-            const priceTicket = parseInt(getPriceTicket);
-
-            const getTotalPriceTicket = parseInt(
-                totalPriceTicket.getAttribute("data-totalPriceTicket")
-            );
-            const getTotalPriceFoodDrink = parseInt(
-                totalPriceFoodDrink.getAttribute("data-totalPriceFoodDrink")
-            );
-            let valueInput;
-            let resultTotalPriceTicket;
-            let result;
-            if (button.getAttribute("data-button") == "up") {
-                valueInput = parseInt(input.value) + 1;
-                resultTotalPriceTicket = getTotalPriceTicket + priceTicket;
-                totalPriceTicket.setAttribute(
-                    "data-totalPriceTicket",
-                    resultTotalPriceTicket
-                );
-                input.value = valueInput;
-                totalPriceTicket.innerHTML = VND.format(resultTotalPriceTicket).replace(
-                    "₫",
-                    ""
-                );
-                handleTotalPriceBill(getTotalPriceFoodDrink, resultTotalPriceTicket);
-            } else if (button.getAttribute("data-button") == "down") {
-                if (input.value > 0) {
-                    valueInput = parseInt(input.value) - 1;
-                    if (getTotalPriceTicket > 0) {
-                        resultTotalPriceTicket = getTotalPriceTicket - priceTicket;
-                    } else {
-                        resultTotalPriceTicket = 0;
+        const timePayment = document.querySelector('.time__payment');
+        let minute = timePayment.getAttribute('data-time') - 1;
+        let second = 60;
+        setInterval(() => {
+            if(minute >= 0) {
+                if(second > 0) {
+                    second -= 1;
+                    timePayment.innerHTML = `${minute < 10 ? '0' + minute : minute } : ${second < 10 ? '0' + second : second}`;
+                }else {
+                    if(minute > 0) {
+                        minute -= 1;
+                        second = 60;
                     }
-                    totalPriceTicket.setAttribute(
-                        "data-totalPriceTicket",
-                        resultTotalPriceTicket
-                    );
-                    input.value = valueInput;
-                    totalPriceTicket.innerHTML = VND.format(resultTotalPriceTicket).replace(
-                        "₫",
-                        ""
-                    );
-                    handleTotalPriceBill(getTotalPriceFoodDrink, resultTotalPriceTicket);
-                } else {
-                    valueInput = 0;
                 }
+            }else {
             }
-        }
-
-        function handleFoodDrink(button) {
-            const input = button.parentElement.querySelector("input.quality_food-drink");
-            const getPrice = button.parentElement.parentElement
-                .querySelector(".price_food-drink")
-                .getAttribute("data-foodDrink");
-            const price = parseInt(getPrice);
-            const getTotalPriceFoodDrink = parseInt(
-                totalPriceFoodDrink.getAttribute("data-totalPriceFoodDrink")
-            );
-            const getTotalPriceTicket = parseInt(
-                totalPriceTicket.getAttribute("data-totalPriceTicket")
-            );
-            let valueInput;
-            let resultTotalPriceFoodDrink;
-            let result = 0;
-            if (button.getAttribute("data-button") == "up") {
-                valueInput = parseInt(input.value) + 1;
-                resultTotalPriceFoodDrink = getTotalPriceFoodDrink + price;
-                totalPriceFoodDrink.setAttribute(
-                    "data-totalPriceFoodDrink",
-                    resultTotalPriceFoodDrink
-                );
-                input.value = valueInput;
-                totalPriceFoodDrink.innerHTML = VND.format(
-                    resultTotalPriceFoodDrink
-                ).replace("₫", "");
-                handleTotalPriceBill(resultTotalPriceFoodDrink, getTotalPriceTicket);
-            } else if (button.getAttribute("data-button") == "down") {
-                if (input.value > 0) {
-                    valueInput = parseInt(input.value) - 1;
-
-                    if (getTotalPriceFoodDrink > 0) {
-                        resultTotalPriceFoodDrink = getTotalPriceFoodDrink - price;
-                    } else {
-                        resultTotalPriceFoodDrink = 0;
-                    }
-
-                    totalPriceFoodDrink.setAttribute(
-                        "data-totalPriceFoodDrink",
-                        resultTotalPriceFoodDrink
-                    );
-                    input.value = valueInput;
-                    totalPriceFoodDrink.innerHTML = VND.format(
-                        resultTotalPriceFoodDrink
-                    ).replace("₫", "");
-                    handleTotalPriceBill(resultTotalPriceFoodDrink, getTotalPriceTicket);
-                } else {
-                    valueInput = 0;
-                }
-            }
-        }
-
-        function handleTotalPriceBill(totalPriceFoodDrink, totalPriceTicket) {
-            result = totalPriceFoodDrink + totalPriceTicket;
-            totalPrice.innerHTML = VND.format(result).replace("₫", "");
-        }
-
-        upQualityTicket.forEach((button) => {
-            button.addEventListener("click", () => {
-                handleTicket(button);
-            });
-        });
-
-        downQualityTicket.forEach((button) => {
-            button.addEventListener("click", () => {
-                handleTicket(button);
-            });
-        });
-
-        upQualityFoodDrink.forEach((button) => {
-            button.addEventListener("click", () => {
-                handleFoodDrink(button);
-            });
-        });
-
-        downQualityFoodDrink.forEach((button) => {
-            button.addEventListener("click", () => {
-                handleFoodDrink(button);
-            });
-        });
-
+        }, 1000);
     </script>
 </body>
 
