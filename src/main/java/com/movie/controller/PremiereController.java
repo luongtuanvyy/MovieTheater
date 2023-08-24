@@ -33,7 +33,7 @@ public class PremiereController extends HttpServlet {
             req.setAttribute("movies", premiereList);
             req.setAttribute("movieIsComingSoon", premiereListComingSoon);
         } catch (Exception e){
-            log("Error: ", e);
+            log("Error When call /premiere: ", e);
         }
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/premiere.jsp");
         requestDispatcher.forward(req, resp);

@@ -210,7 +210,6 @@
             </div>
         </div>
         <div class="filter grid grid-cols-10 gap-4 pt-10">
-            <div></div>
             <c:forEach items="${movieIsComingSoon}" var="movie">
                 <div class="film col-span-2 group/item">
                     <div
