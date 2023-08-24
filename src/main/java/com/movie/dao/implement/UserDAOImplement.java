@@ -42,4 +42,14 @@ public class UserDAOImplement extends AbstractDao<User> implements UserDAO {
     public void delete(User user) {
         super.delete(user);
     }
+
+    @Override
+    public User getUserById(int userId) {
+        return null;
+    }
+
+    @Override
+    public User updateUser(User user) {
+        return null;
+    }
 }
