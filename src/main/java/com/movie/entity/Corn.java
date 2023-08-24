@@ -16,8 +16,14 @@ public class Corn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+    @Column(name = "type")
     private String type;
+
+    @Column(name = "size")
     private String size;
+
+    @Column(name = "price")
     private String price;
 
     @OneToMany(mappedBy = "corn")

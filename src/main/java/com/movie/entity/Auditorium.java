@@ -29,12 +29,12 @@ public class Auditorium implements Serializable {
     private String rowSeat;
 
     @ManyToOne
-    @JoinColumn(name = "theater_id")
+    @JoinColumn(name = "id_theater")
     private Theater theater;
 
-    @OneToMany(mappedBy = "premiere")
+    @OneToMany(mappedBy = "auditorium")
     private List<Premiere> premieres;
 
-    @OneToMany(mappedBy = "seat")
+    @OneToMany(mappedBy = "auditorium")
     private List<Seat> seat;
 }

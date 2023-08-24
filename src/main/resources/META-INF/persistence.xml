@@ -17,8 +17,7 @@ http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
             <property name="org.hibernate.SQL" value="debug"/>
             <property name="org.hibernate.type.descriptor.sql.BasicBinder" value="debug"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/MoiveTheater" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/movietheater" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="123456" />
         </properties>

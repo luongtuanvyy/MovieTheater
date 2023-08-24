@@ -7,14 +7,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
+
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -46,4 +46,7 @@ public class User {
 
     @Column(name = "isMember")
     boolean isMember;
+
+    @OneToMany(mappedBy = "bookTickets")
+    private List<BookTicket> bookTickets;
 }
