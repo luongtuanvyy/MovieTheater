@@ -107,59 +107,8 @@
                 <p class="text-white text-5xl font-bold">Opening this week</p>
             </div>
         </div>
-        <div class="grid grid-cols-10 gap-4">
-            <div class="col-start-2 col-span-2">
-                <p class="text-white">Chọn thể loại</p>
-                <label for="underline_selec" class="sr-only">Underline select</label>
-                <select id="underline_selec"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-                    <option selected>Choose a country</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
-                </select>
-            </div>
-            <div class="col-span-2">
-                <p class="text-white">Chọn thể loại</p>
-                <label for="underline_select" class="sr-only">Underline select</label>
-                <select id="underline_select"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-                    <option selected>Choose a country</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
-                </select>
-            </div>
-            <div class="col-span-2">
-                <p class="text-white">Chọn thể loại</p>
-                <label for="underline" class="sr-only">Underline select</label>
-                <select id="underline"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-                    <option selected>Choose a country</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
-                </select>
-            </div>
-            <div class="col-span-2 flex items-end justify-evenly">
-                <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900
-                    focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
-                    focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
-                    dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
-                    dark:hover:bg-gray-700">Filter</button>
-                <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900
-                    focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700
-                    focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
-                    dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
-                    dark:hover:bg-gray-700">Clear</button>
-            </div>
-        </div>
 
-        <div class="filter grid grid-cols-10 gap-4 pt-10">
-            <div></div>
+        <div class="mx-auto px-36 filter grid grid-cols-8 gap-4 pt-10">
             <c:forEach items="${movies}" var="movie">
                 <div class="film col-span-2 group/item">
                     <div
@@ -209,7 +158,7 @@
                 <p class="text-white text-5xl font-bold">Comming soon</p>
             </div>
         </div>
-        <div class="filter grid grid-cols-10 gap-4 pt-10">
+        <div class="mx-auto px-36 filter grid grid-cols-8 gap-4 pt-10">
             <c:forEach items="${movieIsComingSoon}" var="movie">
                 <div class="film col-span-2 group/item">
                     <div
