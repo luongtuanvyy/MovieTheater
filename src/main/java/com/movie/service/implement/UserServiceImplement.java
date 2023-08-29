@@ -19,4 +19,19 @@ public class UserServiceImplement implements UserService {
     public List<User> getUsers() {
         return userDAO.findAll();
     }
-}
+
+    @Override
+    public User getUserById(int userId) {
+        return userDAO.getUserById(userId);
+    }
+    @Override
+    public User updateUserInfo(int userId, String firstName, String lastName, String email, String phone) {
+        User user = userDAO.getUserById(userId);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        user.setPhone(phone);
+        return userDAO.updateUser(user);
+    }
+    }
+

@@ -1,15 +1,15 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbtractDAO;
+import com.movie.dao.AbstractDao;
 import com.movie.dao.UserDAO;
 import com.movie.entity.User;
 
 import java.util.List;
 
-public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
+public class UserDAOImplement extends AbstractDao<User> implements UserDAO {
     @Override
     public List<User> findAll() {
-        return super.findAll(User.class,false);
+        return super.findAll(User.class);
     }
 
     @Override
@@ -19,13 +19,13 @@ public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
 
     @Override
     public List<User> findByEmail(String email) {
-        String sql = "SELECT u FROM User o WHERE email = ?0";
+        String sql = "SELECT o FROM User o WHERE email = ?0";
         return super.findByParams(User.class,sql,email);
     }
 
     @Override
     public List<User> findByActive(boolean active) {
-        return super.findAll(User.class,true);
+        return super.findAll(User.class);
     }
 
     @Override
@@ -41,5 +41,15 @@ public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
     @Override
     public void delete(User user) {
         super.delete(user);
+    }
+
+    @Override
+    public User getUserById(int userId) {
+        return null;
+    }
+
+    @Override
+    public User updateUser(User user) {
+        return null;
     }
 }
