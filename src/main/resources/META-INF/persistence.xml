@@ -8,9 +8,12 @@ http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/MovieTheater" />
+<<<<<<< HEAD
+=======
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+>>>>>>> 16fd6f132f497cae5b4a2afb82c9a68f5c02cb99
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="123456" />
-
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="none" />

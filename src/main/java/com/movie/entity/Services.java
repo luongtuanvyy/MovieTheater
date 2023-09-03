@@ -18,7 +18,7 @@ public class Services {
     private String id;
 
     @ManyToOne
-    @JoinColumn(name = "id_water")
+    @JoinColumn(name = "id_corn")
     private Corn corn;
 
     @Column(name = "quantity_corn")

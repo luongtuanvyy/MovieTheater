@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/movieOpen", "/movieIsComing"})
+@WebServlet(urlPatterns = {"/premiere"})
 public class PremiereController extends HttpServlet {
     private PremiereService premiereService;
 
@@ -25,40 +25,15 @@ public class PremiereController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String getUrlPattern = req.getServletPath();
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>");
-        switch (getUrlPattern){
-            case "/movieOpen":
-                findMovieOpen(req, resp);
-                System.out.println("AAAAAAAAAAAAAAAAAAAAA");
-                break;
-            case "/movieIsComing":
-                findMovieIsComing(req, resp);
-                break;
-        }
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/home.jsp");
-        requestDispatcher.forward(req, resp);
-    }
-
-    private void findMovieOpen (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Premiere> premiereList = new ArrayList<>();
+        List<Premiere> premiereListComingSoon = new ArrayList<>();
         try {
-            premiereList = premiereService.findPremiereOpen();
+            premiereListComingSoon = premiereService.findPremiereIsComingSoon();
+            premiereList = premiereService.findPremiereOpenThisWeek();
             req.setAttribute("movies", premiereList);
+            req.setAttribute("movieIsComingSoon", premiereListComingSoon);
         } catch (Exception e){
-            log("Failed when call /movieOpen: ", e);
-        }
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/premiere.jsp");
-        requestDispatcher.forward(req, resp);
-    }
-
-    private void findMovieIsComing(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Premiere> premiereList = new ArrayList<>();
-        try {
-            premiereList = premiereService.findPremiereIsComingSoon();
-            req.setAttribute("movies", premiereList);
-        } catch (Exception e){
-            log("Failed when call /movieIsComing; ", e);
+            log("Error When call /premiere: ", e);
         }
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/premiere.jsp");
         requestDispatcher.forward(req, resp);

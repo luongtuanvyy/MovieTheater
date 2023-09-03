@@ -16,21 +16,22 @@ public class PremiereServiceImpl implements PremiereService {
     }
     @Override
     public List<Premiere> findPremiereIsComingSoon() {
+        Calendar calendarNextWeek = Calendar.getInstance();
+        calendarNextWeek.add(Calendar.DATE, 7);
+        List<Premiere> listPremiere = premiereDAO.findAll().stream()
+                .filter(element -> element.getTime().after(calendarNextWeek.getTime()))
+                .collect(Collectors.toList());
+        return listPremiere;
+    }
+
+    @Override
+    public List<Premiere> findPremiereOpenThisWeek() {
         Calendar calendarNow = Calendar.getInstance();
         Calendar calendarNextWeek = Calendar.getInstance();
         calendarNextWeek.add(Calendar.DATE, 7);
         List<Premiere> listPremiere = premiereDAO.findAll().stream()
                 .filter(element -> element.getTime().after(calendarNow.getTime()))
                 .filter(element -> element.getTime().before(calendarNextWeek.getTime()))
-                .collect(Collectors.toList());
-        return listPremiere;
-    }
-
-    @Override
-    public List<Premiere> findPremiereOpen() {
-        Calendar calendarNow = Calendar.getInstance();
-        List<Premiere> listPremiere = premiereDAO.findAll().stream()
-                .filter(element -> element.getTime().equals(calendarNow.getTime()))
                 .collect(Collectors.toList());
         return listPremiere;
     }

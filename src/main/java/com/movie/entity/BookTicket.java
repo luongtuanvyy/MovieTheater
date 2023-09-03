@@ -22,7 +22,7 @@ public class BookTicket {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "id_premiere")
+    @JoinColumn(name = "id_premire")
     private Premiere premiere;
 
     @Column(name = "payment")
