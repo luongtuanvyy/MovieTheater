@@ -5,6 +5,9 @@ import com.movie.dao.implement.PremiereDAOIpml;
 import com.movie.entity.Premiere;
 import com.movie.service.PremiereService;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,24 +19,30 @@ public class PremiereServiceImpl implements PremiereService {
     }
     @Override
     public List<Premiere> findPremiereIsComingSoon() {
-        Calendar calendarNextWeek = Calendar.getInstance();
-        calendarNextWeek.add(Calendar.DATE, 7);
-        List<Premiere> listPremiere = premiereDAO.findAll().stream()
-                .filter(element -> element.getTime().after(calendarNextWeek.getTime()))
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime endOfWeek = now.with(LocalTime.MAX).with(java.time.DayOfWeek.SUNDAY);
+        List<Premiere> premieres = premiereDAO.findAll().stream()
+                .filter(element -> {
+                    LocalDateTime premiereTime = element.getTime().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+                    return premiereTime.isAfter(endOfWeek);
+                })
                 .collect(Collectors.toList());
-        return listPremiere;
+        return premieres;
     }
 
     @Override
     public List<Premiere> findPremiereOpenThisWeek() {
-        Calendar calendarNow = Calendar.getInstance();
-        Calendar calendarNextWeek = Calendar.getInstance();
-        calendarNextWeek.add(Calendar.DATE, 7);
-        List<Premiere> listPremiere = premiereDAO.findAll().stream()
-                .filter(element -> element.getTime().after(calendarNow.getTime()))
-                .filter(element -> element.getTime().before(calendarNextWeek.getTime()))
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime endOfWeek = now.with(LocalTime.MAX).with(java.time.DayOfWeek.SUNDAY);
+
+        List<Premiere> premieres = premiereDAO.findAll().stream()
+                .filter(element -> {
+                    LocalDateTime premiereTime = element.getTime().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+                    return premiereTime.isAfter(now) && premiereTime.isBefore(endOfWeek);
+                })
                 .collect(Collectors.toList());
-        return listPremiere;
+
+        return premieres;
     }
 
     @Override

@@ -25,16 +25,16 @@ public class PremiereController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Premiere> premiereList = new ArrayList<>();
-        List<Premiere> premiereListComingSoon = new ArrayList<>();
+        List<Premiere> premieres = new ArrayList<>();
+        List<Premiere> premieresComingSoon = new ArrayList<>();
         try {
-            premiereListComingSoon = premiereService.findPremiereIsComingSoon();
-            premiereList = premiereService.findPremiereOpenThisWeek();
-            req.setAttribute("movies", premiereList);
-            req.setAttribute("movieIsComingSoon", premiereListComingSoon);
+            premieresComingSoon = premiereService.findPremiereIsComingSoon();
+            premieres = premiereService.findPremiereOpenThisWeek();
         } catch (Exception e){
             log("Error When call /premiere: ", e);
         }
+        req.setAttribute("movies", premieres);
+        req.setAttribute("movieIsComingSoon", premieresComingSoon);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/premiere.jsp");
         requestDispatcher.forward(req, resp);
     }
