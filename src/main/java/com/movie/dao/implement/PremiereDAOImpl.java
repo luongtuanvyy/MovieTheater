@@ -1,12 +1,17 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbtractDAO;
+import com.movie.dao.AbstractDAO;
 import com.movie.dao.PremiereDAO;
+import com.movie.entity.Movie;
 import com.movie.entity.Premiere;
 
+import java.util.Date;
 import java.util.List;
 
-public class PremiereDAOIpml extends AbtractDAO<Premiere> implements PremiereDAO {
+public class PremiereDAOImpl extends AbstractDAO<Premiere> implements PremiereDAO {
+    public PremiereDAOImpl() {
+    }
+
     @Override
     public Premiere findById(int id) {
         return super.findByID(Premiere.class, id);
@@ -29,6 +34,13 @@ public class PremiereDAOIpml extends AbtractDAO<Premiere> implements PremiereDAO
 
     @Override
     public List<Premiere> findAll() {
-        return super.findAll(Premiere.class, true);
+        return super.findAll(Premiere.class);
+    }
+
+    @Override
+    public List<Premiere> findPremieresByMovieAndDate(Movie movie, Date date) { return super.findPremieresByMovieAndDate(movie,date);}
+
+    @Override
+    public List<Premiere> getPremiereTimesByTime(String time) {return super.getPremiereTimesByTime();
     }
 }

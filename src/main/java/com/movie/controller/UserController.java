@@ -20,7 +20,7 @@ public class UserController extends HttpServlet {
         int userId = Integer.parseInt(request.getParameter("userId"));
         User user = userService.getUserById(userId);
         request.setAttribute("user", user);
-        request.getRequestDispatcher("/demoMovies.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +33,7 @@ public class UserController extends HttpServlet {
         User updatedUser = userService.updateUserInfo(userId, firstName, lastName, email, phone);
         request.setAttribute("user", updatedUser);
         request.setAttribute("message", "Thông tin đã được cập nhật.");
-        request.getRequestDispatcher("/demoMovies.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
     }
 }
 

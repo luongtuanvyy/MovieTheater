@@ -35,8 +35,6 @@ public class MovieController extends HttpServlet {
         }
     }
 
-
-
     private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         Movie movie = movieService.findByName(name);
