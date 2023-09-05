@@ -15,7 +15,10 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name="premiere")
-public class Premiere implements Serializable {
+public class Premiere implements Serializable{
+
+    private static final long serialVersionUID = 1234567L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
@@ -34,8 +37,8 @@ public class Premiere implements Serializable {
     @Column(name = "price")
     private Double price;
 
-    @Column(name = "active")
-    private boolean active;
+    @Column(name = "isActive")
+    private boolean isActive;
 
     @OneToMany(mappedBy = "premiere")
     private List<BookTicket> bookTickets;

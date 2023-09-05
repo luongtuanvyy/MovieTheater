@@ -36,6 +36,9 @@ public class Movie {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "isActive")
+    private boolean isActive;
+
     @OneToMany(mappedBy = "movie")
     private List<Premiere> premieres;
 }

@@ -26,6 +26,9 @@ public class Corn {
     @Column(name = "price")
     private String price;
 
+    @Column(name = "isActive")
+    private boolean isActive;
+
     @OneToMany(mappedBy = "corn")
     private List<Services> services;
 }

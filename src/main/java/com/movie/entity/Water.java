@@ -27,6 +27,9 @@ public class Water {
     @Column(name = "price")
     private String price;
 
+    @Column(name = "isActive")
+    private boolean isActive;
+
     @OneToMany(mappedBy = "water")
     private List<Services> services;
 }

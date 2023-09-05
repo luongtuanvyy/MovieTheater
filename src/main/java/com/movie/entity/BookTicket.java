@@ -22,14 +22,11 @@ public class BookTicket {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "id_premire")
+    @JoinColumn(name = "id_premiere")
     private Premiere premiere;
 
     @Column(name = "payment")
     private String payment;
-
-    @Column(name = "price")
-    private String price;
 
     @ManyToOne
     @JoinColumn(name = "id_seat")
@@ -38,4 +35,7 @@ public class BookTicket {
     @ManyToOne
     @JoinColumn(name = "id_service")
     private Services services;
+
+    @Column(name = "isActive")
+    private boolean isActive;
 }

@@ -13,6 +13,9 @@ import java.io.Serializable;
 @Entity
 @Table(name = "seat")
 public class Seat implements Serializable {
+
+    private static final long serialVersionUID = 34558756L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;

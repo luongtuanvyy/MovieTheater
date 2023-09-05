@@ -13,7 +13,10 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "auditorium")
-public class Auditorium implements Serializable {
+public class Auditorium implements Serializable{
+
+    private static final long serialVersionUID = 1654224L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
