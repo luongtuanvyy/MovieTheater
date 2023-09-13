@@ -5,9 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.List;
-import java.util.Set;
 
 
 @Data
@@ -32,6 +29,9 @@ public class User {
 
     @Column(name = "email")
     String email;
+
+    @Column(name = "avatar")
+    String avatar;
 
     @Column(name = "phone")
     String phone;

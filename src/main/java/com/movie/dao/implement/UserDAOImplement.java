@@ -42,4 +42,14 @@ public class UserDAOImplement extends AbtractDAO<User> implements UserDAO {
     public void delete(User user) {
         super.delete(user);
     }
+
+    @Override
+    public List<User> findPageAble(boolean active, int pageNumber, int pageSize) {
+        return super.pageAble(User.class,active,pageNumber,pageSize);
+    }
+
+    @Override
+    public List<User> findByName(String sql, String name) {
+        return super.findByParams(User.class, sql, name);
+    }
 }
