@@ -2,7 +2,7 @@ package com.movie.dao.implement;
 
 import com.movie.dao.AbstractDAO;
 import com.movie.dao.PremiereDAO;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 import com.movie.entity.Premiere;
 
 import java.util.Date;
@@ -38,7 +38,7 @@ public class PremiereDAOImpl extends AbstractDAO<Premiere> implements PremiereDA
     }
 
     @Override
-    public List<Premiere> findPremieresByMovieAndDate(Movie movie, Date date) { return super.findPremieresByMovieAndDate(movie,date);}
+    public List<Premiere> findPremieresByMovieAndDate(Movies movies, Date date) { return super.findPremieresByMovieAndDate(movies,date);}
 
     @Override
     public List<Premiere> getPremiereTimesByTime(String time) {return super.getPremiereTimesByTime();

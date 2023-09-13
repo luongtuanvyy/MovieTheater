@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: DELL
-  Date: 10/08/2023
-  Time: 6:09 CH
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -164,7 +158,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -203,7 +197,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -242,7 +236,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -281,7 +275,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -322,7 +316,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -361,7 +355,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -400,7 +394,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -439,7 +433,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -489,7 +483,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -528,7 +522,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -567,7 +561,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -606,7 +600,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -647,7 +641,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -686,7 +680,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -725,7 +719,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -764,7 +758,7 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
                     <div class="p-5">
@@ -912,4 +906,28 @@
 </script>
 </body>
 
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa thông tin</title>
+</head>
+<body>
+<h2>Chỉnh sửa thông tin</h2>
+<form action="editProfile" method="post">
+    <input type="hidden" name="userId" value="${user.id}">
+    <label for="firstName">Họ:</label>
+    <input type="text" id="firstName" name="firstName" value="${user.firstName}"><br>
+    <label for="lastName">Tên:</label>
+    <input type="text" id="lastName" name="lastName" value="${user.lastName}"><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" value="${user.email}"><br>
+    <label for="phone">Số điện thoại:</label>
+    <input type="text" id="phone" name="phone" value="${user.phone}"><br>
+    <input type="submit" value="Cập nhật">
+</form>
+<p>${message}</p>
+</body>
 </html>

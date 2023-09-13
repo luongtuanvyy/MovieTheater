@@ -2,7 +2,7 @@ package com.movie.service.implement;
 
 import com.movie.dao.PremiereDAO;
 import com.movie.dao.implement.PremiereDAOImpl;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 import com.movie.entity.Premiere;
 import com.movie.service.PremiereService;
 
@@ -54,15 +54,15 @@ public class PremiereServiceImpl implements PremiereService {
         return premieres;
     }
     @Override
-    public List<Premiere> findPremieresByMovieAndDate(Movie movie, Date date) {
+    public List<Premiere> findPremieresByMovieAndDate(Movies movies, Date date) {
         Query query = entityManager.createQuery("SELECT p FROM Premiere p WHERE p.movie = :movie AND p.time = :date", Premiere.class);
-        query.setParameter("movie", movie);
+        query.setParameter("movie", movies);
         query.setParameter("date", date);
         return query.getResultList();
     }
 
     @Override
-    public Movie findMovieById(Long movieId) {
+    public Movies findMovieById(Long movieId) {
         return null;
     }
 

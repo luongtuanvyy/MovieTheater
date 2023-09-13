@@ -160,22 +160,22 @@
 
         <div class="filter grid grid-cols-10 gap-4 pt-10">
             <div></div>
-            <c:forEach items="${movies}" var="movie">
+            <c:forEach items="${movies}" var="movies">
                 <div class="film col-span-2 group/item">
                     <div
                             class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                         <a href="#" class="group-hover/item:bg-gray-500">
                             <img width="100%" class="rounded-t-lg "
-                                 src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                                 src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                                  alt="" />
                         </a>
                         <div class="p-5">
                             <div class="grid grid-cols-4">
                                 <a class="col-span-3">
                                     <h6 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white">
-                                       ${movie.movie.name} </h6>
+                                       ${movies.movies.name} </h6>
                                     <p class="mb-3 text-sm text-gray-700 dark:text-gray-400">
-                                            ${movie.movie.type}
+                                            ${movies.movies.type}
                                     </p>
                                 </a>
                             </div>
@@ -189,7 +189,7 @@
                             </svg>
                         </div>
                         <div class="age absolute top-0 left-0 p-2 font-bold">
-                            <span>${movie.movie.age}</span>
+                            <span>${movies.movies.age}</span>
                         </div>
                         <div class="">
                             <button type="button"
@@ -211,22 +211,22 @@
         </div>
         <div class="filter grid grid-cols-10 gap-4 pt-10">
             <div></div>
-            <c:forEach items="${movieIsComingSoon}" var="movie">
+            <c:forEach items="${movieIsComingSoon}" var="movies">
                 <div class="film col-span-2 group/item">
                     <div
                             class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                         <a href="#" class="group-hover/item:bg-gray-500">
                             <img width="100%" class="rounded-t-lg "
-                                 src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                                 src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                                  alt="" />
                         </a>
                         <div class="p-5">
                             <div class="grid grid-cols-4">
                                 <a class="col-span-3">
                                     <h6 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white">
-                                            ${movie.movie.name} </h6>
+                                            ${movies.movies.name} </h6>
                                     <p class="mb-3 text-sm text-gray-700 dark:text-gray-400">
-                                            ${movie.movie.type}
+                                            ${movies.movies.type}
                                     </p>
                                 </a>
                             </div>
@@ -240,7 +240,7 @@
                             </svg>
                         </div>
                         <div class="age absolute top-0 left-0 p-2 font-bold">
-                            <span>${movie.movie.age}</span>
+                            <span>${movies.movies.age}</span>
                         </div>
                         <div class="">
                             <button type="button"

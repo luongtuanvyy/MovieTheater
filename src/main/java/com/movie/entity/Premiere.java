@@ -18,11 +18,12 @@ import java.util.List;
 public class Premiere implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private String id;
 
     @ManyToOne
     @JoinColumn(name="id_movies")
-    private Movie movie;
+    private Movies movies;
 
     @ManyToOne
     @JoinColumn(name="id_auditorium")

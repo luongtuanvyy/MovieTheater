@@ -88,8 +88,7 @@
                                class="block w-full p-2 pl-5 text-sm text-gray-900 border border-gray-50 rounded-full bg-gray-50 focus:ring-gray-700 focus:border-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                placeholder="Tìm kiếm" required>
                     </div>
-
-
+                </form>
                 <button type="button"
                         class=" text-gray-900 focus:outline-none rounded-lg  focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +97,10 @@
                     </svg>
 
                 </button>
+<<<<<<< HEAD
                 </form>
+=======
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
                 <a href="" class="rounded-full overflow-hidden w-10 h-10">
                     <img height="100%" src="https://i.pinimg.com/236x/82/0c/40/820c40e25c317070b88488b36dd54885.jpg"
                          alt="">
@@ -156,10 +158,17 @@
             </button>
             <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 2"
                     data-carousel-slide-to="1">
+<<<<<<< HEAD
                 <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 3"
                         data-carousel-slide-to="2">
                 </button>
             </button>
+=======
+
+                <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 3"
+                        data-carousel-slide-to="2">
+
+                </button>
         </div>
         <!-- Slider controls -->
         <button type="button"
@@ -199,6 +208,7 @@
                 <p class=" text-5xl font-bold">Phim đang chiếu</p>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="grid grid-cols-10 gap-4">
             <div class="col-start-2 col-span-2">
                 <p class="text-white">Chọn thể loại</p>
@@ -249,6 +259,8 @@
                     dark:hover:bg-gray-700">Clear</button>
             </div>
         </div>
+=======
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
 
         <div class="mx-auto px-36 filter grid grid-cols-10 gap-4 pt-10">
             <div class="film col-span-2 group/item">
@@ -256,10 +268,14 @@
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
+<<<<<<< HEAD
                     <div class="p-5">
+=======
+                    <div class="px-4 py-2">
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
                         <div class="grid grid-cols-4">
                             <a class="col-span-3">
                                 <h6 class="mb-2 text-xl font-bold tracking-tight dark:text-white">
@@ -281,6 +297,7 @@
                     <div class="age absolute top-0 left-0 p-2 font-bold">
                         <span>13+</span>
                     </div>
+<<<<<<< HEAD
                     <div class="">
                         <button type="button"
                                 class="text-white bg-[#111827] hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover/item:visible z-20">Mua
@@ -288,6 +305,16 @@
                     </div>
                     <div class="filter absolute top-0 w-full h-full rounded-lg group-hover/item:bg-gray-900/50 z-10">
                     </div>
+=======
+                    <div
+                            class="filter absolute top-0 w-full h-full flex flex-col justify-center items-center rounded-lg group-hover/item:bg-gray-900/50 z-10">
+                        <button type="button"
+                                class="text-white bg-[#111827] hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 invisible group-hover/item:visible z-20">Chi tiết</button>
+                        <button type="button"
+                                class="text-white bg-[#111827] hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 invisible group-hover/item:visible z-20">Mua
+                            vé</button>
+                    </div>
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
                 </div>
             </div>
         </div>
@@ -298,16 +325,24 @@
                 <p class=" text-5xl font-bold">Phim sắp chiếu</p>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="filter grid grid-cols-8 gap-4 py-10 mx-auto px-36">
+=======
+        <div class="mx-auto px-36 filter grid grid-cols-10 gap-4 py-10">
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
             <div class="film col-span-2 group/item">
                 <div
                         class="max-w-sm bg-transparent rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                     <a href="#" class="group-hover/item:bg-gray-500">
                         <img width="100%" class="rounded-t-lg "
-                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movie-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
+                             src="https://c4.wallpaperflare.com/wallpaper/778/151/694/comics-artwork-bruce-banner-the-incredible-hulk-movies-hulk-1862x2824-entertainment-movies-hd-art-wallpaper-preview.jpg"
                              alt="" />
                     </a>
+<<<<<<< HEAD
                     <div class="p-5">
+=======
+                    <div class="px-4 py-2">
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de
                         <div class="grid grid-cols-4">
                             <a class="col-span-3">
                                 <h6 class="mb-2 text-xl font-bold tracking-tight dark:text-white">
@@ -335,6 +370,15 @@
                             vé</button>
                     </div>
                     <div class="filter absolute top-0 w-full h-full group-hover/item:bg-gray-900/50 z-10">
+                    </div>
+=======
+                    <div
+                            class="filter absolute top-0 w-full h-full flex flex-col justify-center items-center rounded-lg group-hover/item:bg-gray-900/50 z-10">
+                        <button type="button"
+                                class="text-white bg-[#111827] hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 invisible group-hover/item:visible z-20">Chi tiết</button>
+                        <button type="button"
+                                class="text-white bg-[#111827] hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-[#111827] focus:outline-none dark:focus:ring-blue-800 invisible group-hover/item:visible z-20">Mua
+                            vé</button>
                     </div>
                 </div>
             </div>
@@ -452,4 +496,8 @@
 </script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8f641ee186c09b1381bd6ec560bb3031313675de

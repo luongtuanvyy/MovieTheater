@@ -2,7 +2,7 @@ package com.movie.service.implement;
 
 import com.movie.dao.MovieDAO;
 import com.movie.dao.implement.MovieDAOImplement;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 import com.movie.service.MovieService;
 
 import java.util.List;
@@ -13,17 +13,17 @@ public class MovieServiceImplement implements MovieService {
         movieDAO = new MovieDAOImplement();
     }
     @Override
-    public Movie findByName(String name) {
+    public List<Movies> findByName(String name) {
         return movieDAO.findByName(name);
     }
 
     @Override
-    public List<Movie> findMovieType(String type) {
+    public List<Movies> findMovieType(String type) {
         return movieDAO.findMovieType(type);
     }
 
     @Override
-    public List<Movie> findAll() {
+    public List<Movies> findAll() {
         return movieDAO.findAll();
     }
 }

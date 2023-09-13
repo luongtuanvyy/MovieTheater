@@ -1,12 +1,13 @@
 package com.movie.dao;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
+
 import java.util.List;
 
 public interface MovieDAO {
-    Movie findByName(String name);
-    List<Movie> findMovieType(String type);
-    List <Movie> findAll();
-    Movie create (Movie entity);
-    Movie update (Movie entity);
-    void delete (Movie entity);
+    List<Movies> findByName(String name);
+    List<Movies> findMovieType(String type);
+    List <Movies> findAll();
+    Movies create (Movies entity);
+    Movies update (Movies entity);
+    void delete (Movies entity);
 }

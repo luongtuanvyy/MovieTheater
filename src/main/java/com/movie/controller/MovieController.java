@@ -1,6 +1,6 @@
 package com.movie.controller;
 
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 import com.movie.service.MovieService;
 import com.movie.service.implement.MovieServiceImplement;
 
@@ -22,36 +22,37 @@ public class MovieController extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getServletPath();
-
-        if ("/findByName".equals(action)) {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getRequestURI();
+        System.out.println(action);
+        if ("/movie/findByName".equals(action)) {
             findByName(request, response);
-        } else if ("/findMovieType".equals(action)) {
+        } else if ("/movie/findMovieType".equals(action)) {
             findMovieType(request, response);
-        } else if ("/findAll".equals(action)) {
+        } else if ("/movie/findAll".equals(action)) {
             findAll(request, response);
         } else {
+            System.out.println("");
         }
     }
 
     private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("name");
-        Movie movie = movieService.findByName(name);
-        request.setAttribute("movie", movie);
-        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
+//        String name = request.getParameter("name");
+//        Movie movie = movieService.findByName(name);
+//        request.setAttribute("movie", movie);
+        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
     }
 
     private void findMovieType(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String type = request.getParameter("type");
-        List<Movie> movies = movieService.findMovieType(type);
+        List<Movies> movies = movieService.findMovieType(type);
         request.setAttribute("movies", movies);
-        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
     }
 
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Movie> movies = movieService.findAll();
+        List<Movies> movies = movieService.findAll();
         request.setAttribute("movies", movies);
-        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
     }
 }

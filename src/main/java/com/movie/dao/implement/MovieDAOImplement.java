@@ -2,38 +2,39 @@ package com.movie.dao.implement;
 
 import com.movie.dao.AbstractDAO;
 import com.movie.dao.MovieDAO;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 
 import java.util.List;
 
-public class MovieDAOImplement extends AbstractDAO <Movie> implements MovieDAO {
+public class MovieDAOImplement extends AbstractDAO <Movies> implements MovieDAO {
 
     @Override
-    public Movie findByName(String name) {
-        String sql = " FROM Movie WHERE name = ?0";
-        return super.findOne(Movie.class,sql, name);
+    public List<Movies> findByName(String name) {
+        String sql = "SELECT o FROM Movies o WHERE o.name LIKE ?0";
+        name = name + "%";
+        return super.findByParams(Movies.class,sql, name);
     }
     @Override
-    public List<Movie> findMovieType(String type) {
+    public List<Movies> findMovieType(String type) {
         String sql = " FROM Movie WHERE type = ?0";
-        return super.findMany(Movie.class,sql, type);
+        return super.findMany(Movies.class,sql, type);
     }
     @Override
-    public List<Movie> findAll() {
-        return super.findAll(Movie.class);
+    public List<Movies> findAll() {
+        return super.findAll(Movies.class);
     }
 
     @Override
-    public Movie create(Movie entity) {
+    public Movies create(Movies entity) {
         return super.create(entity);
     }
 
     @Override
-    public Movie update(Movie entity) {
+    public Movies update(Movies entity) {
         return super.update(entity);
     }
     @Override
-    public void delete(Movie entity) {
+    public void delete(Movies entity) {
         super.delete(entity);
     }
 }

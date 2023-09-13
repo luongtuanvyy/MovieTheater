@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="movie-1.0-SNAPSHOT.war">
+    <root id="archive" name="movies-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="MovieTheater:war exploded" />
     </root>
   </artifact>

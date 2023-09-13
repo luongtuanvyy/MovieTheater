@@ -1,7 +1,7 @@
 package com.movie.controller;
 
 import com.movie.dao.implement.PremiereDAOImpl;
-import com.movie.entity.Movie;
+import com.movie.entity.Movies;
 import com.movie.entity.Premiere;
 import com.movie.service.PremiereService;
 import com.movie.service.implement.PremiereServiceImpl;
@@ -33,10 +33,10 @@ public class PremiereController extends HttpServlet {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date date = dateFormat.parse(dateString);
 
-            Movie movie = premiereService.findMovieById(movieId);
+            Movies movies = premiereService.findMovieById(movieId);
 
-            if (movie != null) {
-                List<Premiere> premieres = premiereService.findPremieresByMovieAndDate(movie, date);
+            if (movies != null) {
+                List<Premiere> premieres = premiereService.findPremieresByMovieAndDate(movies, date);
 
                 request.setAttribute("premieres", premieres);
                 request.getRequestDispatcher("/premiere.jsp").forward(request, response);

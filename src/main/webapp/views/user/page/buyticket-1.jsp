@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
         /* active select */
         .active {
             color: #000000;
-            border-bottom: 1px solid rgb(31 41 55 / var(--tw-bg-opacity));
+
         }
 
         * {
