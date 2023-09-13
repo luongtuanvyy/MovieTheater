@@ -15,7 +15,10 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = 168682349L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -47,4 +50,7 @@ public class User {
 
     @Column(name = "isMember")
     boolean isMember;
+
+    @OneToMany(mappedBy = "user")
+    private List<BookTicket> bookTickets;
 }
