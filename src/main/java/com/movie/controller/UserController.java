@@ -50,12 +50,12 @@ public class UserController extends HttpServlet {
     }
     // Gắn các đường dẫn vào path
     private void doGetLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/page/login.html");
         requestDispatcher.forward(req,resp);
     }
     // Gắn các đường dẫn vào path
     private void doGetRegister(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user/page/register.html");
         requestDispatcher.forward(req,resp);
     }
     private void doGetLogout(HttpSession session,HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -65,12 +65,18 @@ public class UserController extends HttpServlet {
     private void doPostLogin(HttpSession session,HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        String rememberParam = req.getParameter("remember");
+        Boolean remember = Boolean.valueOf(rememberParam);
 
         User user = userService.login(username,password);
 
         if (user != null){
-            session.setAttribute(SessionAttr.CURRENT_USER, user);
-            resp.sendRedirect("index");
+            if(remember == true){
+                session.setAttribute(SessionAttr.CURRENT_USER, user);
+                resp.sendRedirect("index");
+            }else {
+                resp.sendRedirect("index");
+            }
         }else {
             resp.sendRedirect("login");
         }
