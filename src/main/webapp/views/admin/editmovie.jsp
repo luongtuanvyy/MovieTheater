@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html>
 
@@ -209,10 +210,11 @@
                                         class="px-4 py-2 text-md font-medium text-gray-900 bg-white hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                                     Hủy thay đổi
                                 </button>
-                                <button type="button"
-                                        class="px-4 py-2 text-md font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+                                <label for="submit"
+                                       style="cursor: pointer"
+                                       class="px-4 py-2 text-md font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
                                     Lưu
-                                </button>
+                                </label>
                                 <button id="dropdownMenuIconHorizontalButton"
                                         data-dropdown-toggle="dropdownDotsHorizontal"
                                         class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -241,12 +243,14 @@
                     </div>
                 </div>
             </section>
-            <form action="">
+            <form action="/movie_war/admin/doPostMovie" method="post">
                 <div class="grid grid-cols-8">
                     <div class="col-span-5">
                         <section class="bg-white dark:bg-gray-900">
                             <div class="px-4">
-                                <form action="#">
+                                <div>
+                                    <button type="submit"  id="submit" hidden="true"></button>
+                                    <input name="id" hidden="true" value="${movie.id}">
                                     <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                                         <div class="sm:col-span-2  border border-gray-300 rounded-lg">
                                             <label for="name"
@@ -254,15 +258,19 @@
                                                 phim ( bắt buộc )</label>
                                             <input type="text" name="name" id="name"
                                                    class="bg-white border-0 pb-4 rounded-lg text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 focus:ring-0 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                                   placeholder="Tên " required="">
+                                                   placeholder="Tên " required=""
+                                                   value="${movie.name}"
+                                            >
                                         </div>
                                         <div class="sm:col-span-2 border border-gray-300 rounded-lg">
                                             <label for="name"
                                                    class="block p-2 pb-0 text-sm font-medium text-gray-500 dark:text-white">Mô
                                                 tả</label>
-                                            <textarea id="message" rows="4"
+                                            <textarea id="message" name="description" rows="4"
                                                       class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border-0 border-gray-300 focus:ring-0 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                      placeholder="Write your thoughts here..."></textarea>
+                                                      placeholder="Write your thoughts here..."
+                                                      value="${movie.description}"
+                                            ></textarea>
                                         </div>
                                         <div class="sm:col-span-2">
                                             <label for="brand"
@@ -302,9 +310,11 @@
                                             <label for="price"
                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thời
                                                 lượng ( phút )</label>
-                                            <input type="number" name="price" id="price"
+                                            <input type="number" name="time" id="time"
                                                    class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-0 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                                   placeholder="" required="">
+                                                   placeholder="" required=""
+                                                   value="${movie.time}"
+                                            >
                                         </div>
                                         <div>
                                             <label for="category"
@@ -355,9 +365,11 @@
                                             <label for="item-weight"
                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Giới
                                                 hạn độ tuổi</label>
-                                            <input type="number" name="item-weight" id="item-weight"
+                                            <input type="number" name="age" id="item-weight"
                                                    class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                                   placeholder="12" required="">
+                                                   placeholder="12" required=""
+                                                   value="${movie.age}"
+                                            >
                                         </div>
 
                                         <div class="">
@@ -374,14 +386,17 @@
                                                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                                     </svg>
                                                 </div>
-                                                <input datepicker type="text"
+                                                <fmt:formatDate value="${movie.releaseDate}" pattern="dd/mm/yyyy" var="date"/>
+                                                <input datepicker type="text" name="releaseDate"
                                                        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                       placeholder="Select date">
+                                                       placeholder="Select date"
+                                                       value="${date}"
+                                                >
                                             </div>
                                         </div>
 
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -407,7 +422,7 @@
                                    class="block p-2 pt-0 mb-2 pb-0 text-sm font-medium text-gray-500 dark:text-white">Trạng
                                 thái</label>
                             <label class="relative inline-flex ml-2 items-center mb-4 cursor-pointer">
-                                <input type="checkbox" value="" checked class="sr-only peer">
+                                <input name="isActive" type="checkbox" id="isActive" value="isActive" checked="checked" class="sr-only peer">
                                 <div
                                         class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-gray-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-600">
                                 </div>

@@ -13,7 +13,10 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "auditorium")
-public class Auditorium implements Serializable {
+public class Auditorium implements Serializable{
+
+    private static final long serialVersionUID = 1654224L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -29,12 +32,12 @@ public class Auditorium implements Serializable {
     private String rowSeat;
 
     @ManyToOne
-    @JoinColumn(name = "theater_id")
+    @JoinColumn(name = "id_theater")
     private Theater theater;
 
-    @OneToMany(mappedBy = "premiere")
+    @OneToMany(mappedBy = "auditorium")
     private List<Premiere> premieres;
 
-    @OneToMany(mappedBy = "seat")
+    @OneToMany(mappedBy = "auditorium")
     private List<Seat> seat;
 }
