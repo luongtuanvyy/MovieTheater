@@ -16,21 +16,29 @@ import java.util.List;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "age")
     private String age;
 
     @Column(name = "release_date")
     private Date releaseDate;
 
+    @Column(name = "time")
     private int time;
 
+    @Column(name = "description")
     private String description;
 
-    private MovieType type;
+    @Column(name = "type")
+    private String type;
 
-    @OneToMany(mappedBy = "premiere")
+    @Column(name = "isActive")
+    private boolean isActive;
+
+    @OneToMany(mappedBy = "movie")
     private List<Premiere> premieres;
 }

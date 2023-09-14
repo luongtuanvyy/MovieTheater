@@ -28,9 +28,6 @@ public class BookTicket {
     @Column(name = "payment")
     private String payment;
 
-    @Column(name = "price")
-    private String price;
-
     @ManyToOne
     @JoinColumn(name = "id_seat")
     private Seat seat;
@@ -38,4 +35,7 @@ public class BookTicket {
     @ManyToOne
     @JoinColumn(name = "id_service")
     private Services services;
+
+    @Column(name = "isActive")
+    private boolean isActive;
 }

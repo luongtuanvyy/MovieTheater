@@ -29,4 +29,10 @@ public class MovieDaoImpl extends AbtractDAO<Movie> implements MovieDao {
     public void deleteMovie(Movie movie) {
         super.delete(movie);
     }
+
+    @Override
+    public Movie getMovieById(String id) {
+        Movie result = super.findByID(Movie.class ,Integer.parseInt(id));
+        return result;
+    }
 }

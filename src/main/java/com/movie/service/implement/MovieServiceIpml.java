@@ -36,4 +36,10 @@ public class MovieServiceIpml implements MovieService {
     public void deleteMovie(Movie movie) {
         this.movieDao.deleteMovie(movie);
     }
+
+    @Override
+    public Movie getMovieById(String id) {
+        Movie result = this.movieDao.getMovieById(id);
+        return result;
+    }
 }

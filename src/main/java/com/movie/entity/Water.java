@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-
 @Data
 @Entity
 @NoArgsConstructor
@@ -18,12 +17,18 @@ public class Water {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
+    @Column(name = "type")
     private String type;
 
+    @Column(name = "size")
     private String size;
 
+    @Column(name = "price")
     private String price;
 
-    @OneToMany(mappedBy = "corn")
+    @Column(name = "isActive")
+    private boolean isActive;
+
+    @OneToMany(mappedBy = "water")
     private List<Services> services;
 }
