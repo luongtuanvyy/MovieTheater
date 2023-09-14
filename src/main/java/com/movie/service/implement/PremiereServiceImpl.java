@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.movie.dao.AbstractDAO.entityManager;
+import static com.movie.dao.AbstractDao.entityManager;
 
 public class PremiereServiceImpl implements PremiereService {
     PremiereDAO premiereDAO;

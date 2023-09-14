@@ -1,12 +1,12 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbstractDAO;
+import com.movie.dao.AbstractDao;
 import com.movie.dao.UserDAO;
 import com.movie.entity.User;
 
 import java.util.List;
 
-public class UserDAOImplement extends AbstractDAO <User> implements UserDAO {
+public class UserDAOImplement extends AbstractDao<User> implements UserDAO {
 
     @Override
     public List<User> findAll() {

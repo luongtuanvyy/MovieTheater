@@ -1,6 +1,6 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbstractDAO;
+import com.movie.dao.AbstractDao;
 import com.movie.dao.PremiereDAO;
 import com.movie.entity.Movies;
 import com.movie.entity.Premiere;
@@ -8,7 +8,7 @@ import com.movie.entity.Premiere;
 import java.util.Date;
 import java.util.List;
 
-public class PremiereDAOImpl extends AbstractDAO<Premiere> implements PremiereDAO {
+public class PremiereDAOImpl extends AbstractDao<Premiere> implements PremiereDAO {
     public PremiereDAOImpl() {
     }
 

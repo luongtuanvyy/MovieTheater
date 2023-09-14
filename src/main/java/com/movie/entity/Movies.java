@@ -47,4 +47,6 @@ public class Movies implements Serializable {
 
     @OneToMany(mappedBy = "movies")
     private List<Premiere> premieres;
+
+
 }

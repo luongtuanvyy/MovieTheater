@@ -8,7 +8,7 @@ import javax.persistence.TypedQuery;
 import java.util.Date;
 import java.util.List;
 
-public class AbstractDAO<T> {
+public class AbstractDao<T> {
 
     public static final EntityManager entityManager = JDBCUtils.getEntityManager();
 

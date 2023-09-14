@@ -1,12 +1,12 @@
 package com.movie.dao.implement;
 
-import com.movie.dao.AbstractDAO;
+import com.movie.dao.AbstractDao;
 import com.movie.dao.MovieDAO;
 import com.movie.entity.Movies;
 
 import java.util.List;
 
-public class MovieDAOImplement extends AbstractDAO <Movies> implements MovieDAO {
+public class MovieDAOImplement extends AbstractDao<Movies> implements MovieDAO {
 
     @Override
     public List<Movies> findByName(String name) {

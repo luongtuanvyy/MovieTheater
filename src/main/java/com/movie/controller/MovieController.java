@@ -12,10 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = { "/findByName", "/findMovieType", "/findAll"})
+@WebServlet(urlPatterns = {"/findByName", "/findMovieType", "/findAll", "/home"})
 public class MovieController extends HttpServlet {
 
     private MovieService movieService;
+
     @Override
     public void init() throws ServletException {
         movieService = new MovieServiceImplement();
@@ -23,36 +24,41 @@ public class MovieController extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getRequestURI();
-        System.out.println(action);
-        if ("/movie/findByName".equals(action)) {
+        String action = request.getServletPath();
+
+        if ("/findByName".equals(action)) {
             findByName(request, response);
-        } else if ("/movie/findMovieType".equals(action)) {
+        } else if ("/findMovieType".equals(action)) {
             findMovieType(request, response);
-        } else if ("/movie/findAll".equals(action)) {
+        } else if ("/findAll".equals(action)) {
             findAll(request, response);
         } else {
-            System.out.println("");
+            request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
         }
     }
 
+
     private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String name = request.getParameter("name");
-//        Movie movie = movieService.findByName(name);
-//        request.setAttribute("movie", movie);
-        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
+        request.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");
+        List<Movies> movies = movieService.findByName(name);
+        request.setAttribute("films",movies);
+        movies.stream().forEachOrdered(movie -> {
+            System.out.println(movie.getName());
+        });
+        request.getRequestDispatcher("/views/user/page/search.jsp").forward(request, response);
     }
 
     private void findMovieType(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String type = request.getParameter("type");
         List<Movies> movies = movieService.findMovieType(type);
         request.setAttribute("movies", movies);
-        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
     }
 
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Movies> movies = movieService.findAll();
         request.setAttribute("movies", movies);
-        request.getRequestDispatcher("/views/user/page/home.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/user/home.jsp").forward(request, response);
     }
 }
